@@ -1,21 +1,24 @@
 'use strict';
 
+
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
   'myApp.view2',
-  'myApp.version'
+  'myApp.version',
+  'myApp.controllers'
 ])
 
-.controller('TodoListController', ['$scope', function($scope) {
-  $scope.greeting = 'Hola!';
-  $scope.todos = ['Do this', 'Do that'];
-}])
+//.controller('TodoListController', ['$scope', function($scope) {
+//  $scope.greeting = 'Hola!';
+//  $scope.todos = ['Do this', 'Do that'];
+//}])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
+
 
 
 
